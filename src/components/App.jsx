@@ -13,7 +13,7 @@ export class App extends Component {
   state = {
     images: [],
     query: '',
-    page: 1,
+    page: 0,
     isLoading: false,
     error: null,
   };
