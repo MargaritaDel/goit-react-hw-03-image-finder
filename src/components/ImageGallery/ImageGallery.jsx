@@ -1,14 +1,11 @@
 import ImageGalleryItem from 'components/ImageGalleryItem/ImageGalleryItem';
-import '../styles.css';
 import PropTypes from 'prop-types';
 import { Component } from 'react';
 import Modal from 'components/Modal/Modal';
+import '../styles.css';
 
 export class ImageGallery extends Component {
-  static propTypes = {
-    images: PropTypes.arrayOf(PropTypes.object).isRequired,
-    page: PropTypes.number.isRequired,
-  };
+ 
   state = {
     isShowModal: false,
     largeImage: '',
@@ -50,3 +47,8 @@ export class ImageGallery extends Component {
     );
   }
 }
+
+ImageGallery.propTypes = {
+  images: PropTypes.arrayOf(PropTypes.object).isRequired,
+  page: PropTypes.number.isRequired,
+};

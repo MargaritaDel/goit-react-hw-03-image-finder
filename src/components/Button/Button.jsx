@@ -1,8 +1,7 @@
 import css from './Button.module.css';
-
 import PropTypes from 'prop-types';
 
-const Button = ({ onClick }) => {
+export  const Button = ({ onClick }) => {
   return (
     <button className={css.Button} onClick={() => onClick()}>
       Load more
@@ -14,4 +13,3 @@ Button.propTypes = {
   onClick: PropTypes.func.isRequired,
 };
 
-export default Button;

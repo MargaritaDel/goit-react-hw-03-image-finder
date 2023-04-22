@@ -1,9 +1,9 @@
 
 import { Component } from 'react';
-import fetchImagesWithQuery from 'services/fetchImages';
-import Searchbar from './Searchbar/Searchbar';
+import fetchImagesWithQuery from 'services/api';
+import {Searchbar} from './Searchbar/Searchbar';
 import {ImageGallery} from './ImageGallery/ImageGallery';
-import Button from './Button/Button';
+import {Button} from './Button/Button';
 import {Loader} from './Loader/Loader';
 
 

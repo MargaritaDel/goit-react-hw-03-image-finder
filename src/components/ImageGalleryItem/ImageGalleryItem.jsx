@@ -1,14 +1,10 @@
-import '../styles.css';
 import { Component } from 'react';
 import PropTypes from 'prop-types';
+import '../styles.css';
+import css from './ImageGalleryItem.module.css';
 
 class ImageGalleryItem extends Component {
-  static propTypes = {
-    src: PropTypes.string.isRequired,
-    alt: PropTypes.string.isRequired,
-    largeImage: PropTypes.string.isRequired,
-    isShowModal: PropTypes.func.isRequired,
-  };
+
   static defaultProps = {
     src: '',
     alt: '',
@@ -24,9 +20,9 @@ class ImageGalleryItem extends Component {
     const { src, alt } = this.props;
 
     return (
-      <li className="ImageGalleryItem">
+      <li className={css.galleryItem}>
         <img
-          className="ImageGalleryItem-image"
+          className={css.ImageGalleryItem}
           src={src}
           alt={alt}
           onClick={this.createModal}
@@ -35,5 +31,10 @@ class ImageGalleryItem extends Component {
     );
   }
 }
-
+ImageGalleryItem.propTypes = {
+  src: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
+  largeImage: PropTypes.string.isRequired,
+  isShowModal: PropTypes.func.isRequired,
+};
 export default ImageGalleryItem;
